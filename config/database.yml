@@ -1,0 +1,38 @@
+#
+#                         ATTENTION!
+#
+# You may also need to edit java/dart-sync/pom.xml :(
+# -----------------------------------------------------
+
+development:
+  #host: 192.168.11.8
+  adapter: mysql2
+  encoding: utf8
+  database: ng-form_development
+  username: root
+  password: redhat 
+  #socket: /var/lib/mysql/mysql.sock
+  reconnect: true
+
+# Warning: The database defined as 'test' will be erased and
+# re-generated from your development database when you run 'rake'.
+# Do not set this db to the same as development or production.
+test:
+  #host: 192.168.11.8
+  adapter: mysql2
+  encoding: utf8
+  database: ng-form_test<%=ENV['TEST_ENV_NUMBER']%> # Needed for parallel_tests
+  username: root
+  password: redhat
+  #socket: /var/lib/mysql/mysql.sock
+  #reconnect: true
+
+production:
+  #host: 192.168.11.8
+  adapter: mysql2
+  encoding: utf8
+  database: ng-form_production
+  username: root
+  password: redhat
+  #socket: /var/lib/mysql/mysql.sock
+  #reconnect: true
